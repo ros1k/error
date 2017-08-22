@@ -1,0 +1,26 @@
+.container{
+  max-width: 1070px;
+  margin: 0 auto;
+
+  [class*="col-"]{
+    float: left;
+
+  }
+
+  .row{
+    margin-bottom: 10px;
+    &:before,&:after{
+      content: "";
+      min-height: 1px;
+      clear: both;
+      display: block;
+    }
+
+    @for $i from 1 through 12{
+      .col-#{$i}{
+        width: ((1/12)*100%*$i);
+
+      }
+    }
+  }
+}

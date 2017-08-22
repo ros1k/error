@@ -1,0 +1,183 @@
+.container {
+  max-width: 1070px;
+  margin: 0 auto; }
+  .container [class*="col-"] {
+    float: left; }
+  .container .row {
+    margin-bottom: 10px; }
+    .container .row:before, .container .row:after {
+      content: "";
+      min-height: 1px;
+      clear: both;
+      display: block; }
+    .container .row .col-1 {
+      width: 8.33333%; }
+    .container .row .col-2 {
+      width: 16.66667%; }
+    .container .row .col-3 {
+      width: 25%; }
+    .container .row .col-4 {
+      width: 33.33333%; }
+    .container .row .col-5 {
+      width: 41.66667%; }
+    .container .row .col-6 {
+      width: 50%; }
+    .container .row .col-7 {
+      width: 58.33333%; }
+    .container .row .col-8 {
+      width: 66.66667%; }
+    .container .row .col-9 {
+      width: 75%; }
+    .container .row .col-10 {
+      width: 83.33333%; }
+    .container .row .col-11 {
+      width: 91.66667%; }
+    .container .row .col-12 {
+      width: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+section {
+  padding: 100px 0; }
+
+.container {
+  width: 1070px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+#navigation {
+  width: 100vw;
+  position: fixed;
+  color: #FFF; }
+  #navigation .container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #navigation .container .header-logo span {
+      display: none; }
+    #navigation .container .menu {
+      display: flex;
+      list-style-type: none; }
+      #navigation .container .menu li {
+        margin: auto 10px; }
+
+#home {
+  height: 860px;
+  background-image: url("/img/slider-bg.jpg"); }
+  #home .home-sliders {
+    height: 100%; }
+    #home .home-sliders .home-slide {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+#service {
+  height: 740px; }
+  #service .container {
+    color: black; }
+    #service .container .service-title {
+      height: 135px;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      #service .container .service-title h2 {
+        margin-bottom: 30px; }
+    #service .container .service-body {
+      height: 160px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      #service .container .service-body .row {
+        margin-right: -15px;
+        margin-left: -15px; }
+      #service .container .service-body .service-info {
+        width: 330px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        display: table-cell;
+        vertical-align: top; }
+        #service .container .service-body .service-info a {
+          float: left;
+          margin-right: 50px; }
+        #service .container .service-body .service-info h3 {
+          color: #00C7FC; }
+
+#service-bottom {
+  position: relative;
+  height: 500px;
+  background-image: url("../img/slider-bg.jpg"); }
+  #service-bottom .mobile {
+    position: relative; }
+    #service-bottom .mobile .black {
+      position: absolute;
+      left: 33%;
+      z-index: 5; }
+    #service-bottom .mobile .white {
+      position: absolute;
+      left: 57%;
+      z-index: 4;
+      top: 62px; }
+  #service-bottom .service-feature {
+    background-color: #0f748f;
+    color: #fff;
+    position: absolute;
+    top: 18%;
+    right: 0;
+    height: 335px;
+    padding: 50px 0 50px 65px;
+    width: 45%; }
+    #service-bottom .service-feature h3 {
+      margin-bottom: 60px; }
+    #service-bottom .service-feature ul {
+      list-style-type: none; }
+      #service-bottom .service-feature ul li {
+        padding-left: 50px;
+        line-height: 36px; }
+
+#portfolio .title {
+  width: 100%;
+  text-align: center; }
+
+#portfolio .projects-nav .list-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  #portfolio .projects-nav .list-nav li {
+    list-style-type: none;
+    margin: 20px 10px; }
+    #portfolio .projects-nav .list-nav li a {
+      display: inline-block;
+      color: #000;
+      text-decoration: none; }
+
+#portfolio .projects {
+  width: 100%;
+  height: 200px; }
+  #portfolio .projects .projects-item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 25%; }
+    #portfolio .projects .projects-item img {
+      vertical-align: middle; }
+      #portfolio .projects .projects-item img .responsive {
+        display: block;
+        max-width: 100%;
+        height: auto; }
+
+#about {
+  padding-bottom: 0; }
+  #about .about-title {
+    text-align: center; }

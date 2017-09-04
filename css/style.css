@@ -47,6 +47,10 @@ body {
 section {
   padding: 100px 0; }
 
+.position {
+  color: #00c7fc;
+  border-bottom: 3px solid #00c7fc; }
+
 .container {
   width: 1070px;
   padding-right: 15px;
@@ -63,20 +67,27 @@ section {
     height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.6); }
     #navigation .container .header-logo {
       flex-grow: 1; }
       #navigation .container .header-logo span {
         display: none; }
-    #navigation .container .menu {
-      display: flex;
-      list-style-type: none; }
-      #navigation .container .menu li {
-        margin: auto 10px; }
+    #navigation .container nav {
+      position: relative;
+      height: 100%; }
+      #navigation .container nav .menu {
+        text-align: center;
+        list-style-type: none;
+        height: 100%; }
+        #navigation .container nav .menu li {
+          display: inline-block;
+          margin: auto 10px;
+          height: 100%;
+          padding-top: 8.5%; }
 
 #home {
   height: 860px;
-  background-image: url("img/slider-bg.jpg");
   width: 100%;
   padding: 0;
   position: relative; }
@@ -173,12 +184,12 @@ section {
       #service .container .service-body .row {
         margin-right: -15px;
         margin-left: -15px; }
+      #service .container .service-body .service-body-link {
+        margin-top: 50px; }
       #service .container .service-body .service-info {
         width: 330px;
         padding-bottom: 50px;
-        padding-left: 20px;
-        display: table-cell;
-        vertical-align: top; }
+        padding-left: 20px; }
         #service .container .service-body .service-info a {
           float: left;
           margin-right: 50px; }
@@ -193,12 +204,12 @@ section {
     position: relative; }
     #service-bottom .container .mobile .black {
       position: absolute;
-      left: 10%;
+      left: 20%;
       top: 5%;
       z-index: 5; }
     #service-bottom .container .mobile .white {
       position: absolute;
-      left: 25%;
+      left: 40%;
       z-index: 4;
       top: 62px; }
   #service-bottom .container .service-feature {
@@ -241,16 +252,38 @@ section {
   #portfolio .projects {
     width: 100%; }
     #portfolio .projects .projects-item {
+      margin: 2px 4px;
       text-align: center;
       position: relative;
       float: left;
-      width: 25%; }
+      width: 24%; }
       #portfolio .projects .projects-item img {
-        vertical-align: middle; }
-        #portfolio .projects .projects-item img .responsive {
-          display: block;
-          max-width: 100%;
-          height: auto; }
+        width: 100%;
+        height: 100%; }
+      #portfolio .projects .projects-item .item-zoom {
+        position: absolute;
+        top: 33%;
+        left: calc(50% - 50px);
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 199, 252, 0.8);
+        border-radius: 50%; }
+        #portfolio .projects .projects-item .item-zoom:after {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          z-index: 99999999; }
+        #portfolio .projects .projects-item .item-zoom:before {
+          border: 4px solid white; }
+      #portfolio .projects .projects-item .item-info {
+        color: black;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: white; }
+        #portfolio .projects .projects-item .item-info span {
+          color: rgba(0, 199, 252, 0.8); }
 
 #about {
   padding-bottom: 0; }
@@ -279,30 +312,13 @@ section {
       #numbers .numbers-show .number-show-content .numbers-icon {
         margin: 20px;
         width: 50px;
-        height: 30px;
+        height: 50px;
         position: relative;
         background-color: #1f2021;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         display: flex;
         justify-content: center;
         align-items: center; }
-        #numbers .numbers-show .number-show-content .numbers-icon:before {
-          position: absolute;
-          top: -15px;
-          content: "";
-          width: 0;
-          height: 0;
-          border-left: 25px solid transparent;
-          border-right: 25px solid transparent;
-          border-bottom: 15px solid #1f2021; }
-        #numbers .numbers-show .number-show-content .numbers-icon:after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
-          top: 30px;
-          border-left: 25px solid transparent;
-          border-right: 25px solid transparent;
-          border-top: 15px solid #1f2021; }
         #numbers .numbers-show .number-show-content .numbers-icon img {
           width: 25px;
           height: 25px; }

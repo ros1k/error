@@ -1,5 +1,5 @@
 .container{
-  max-width: 1070px;
+  max-width: 1200px;
   margin: 0 auto;
 
   [class*="col-"]{
@@ -18,7 +18,7 @@
 
     @for $i from 1 through 12{
       .col-#{$i}{
-        width: ((1/12)*100%*$i);
+        width: ((100%/12)*$i);
 
       }
     }

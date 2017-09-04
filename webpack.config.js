@@ -12,32 +12,24 @@ module.exports = {
     devServer: {
         inline: true,
         contentBase: './',
-        port: 8000
+        port: 8888
     },
     watch: true,
     module: {
         loaders: [{
             test: /\.jsx$/,
-
+            exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
                 presets: ['es2015', 'stage-2', 'react']
             }
-        },
-            {
-                test: /\.css$/,
-                include: /node_modules/,
-                loader: ['style-loader?-url','css-loader']
-            },
-            {
+        },  {
                 test: /\.scss$/,
-                exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader?-url','sass-loader']
                 })
             }
-
         ]
     },
     plugins: [
@@ -51,11 +43,11 @@ module.exports = {
             {
                 // browse to http://localhost:3000/ during development
                 host: 'localhost',
-                port: 3003,
+                port: 3300,
                 // proxy the Webpack Dev Server endpoint
                 // (which should be serving on http://localhost:3100/)
                 // through BrowserSync
-                proxy: 'http://localhost:8000/'
+                proxy: 'http://localhost:8888/'
             },
             // plugin options
             {

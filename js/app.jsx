@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded',function () {
 
 let homeSlides = document.querySelectorAll('.home-slide');
 
-for(let i = 0; i < homeSlides.length; i++){
-    homeSlides[i].style.backgroundImage = `url('../img/slider/bg${i+1}.jpg')`
-}
 
 
+
+let skills = document.querySelectorAll("#about-us .bar")
+    for (let i = 0; i < skills.length; i++) {
+        skills[i].style.width = skills[i].dataset.progress + "%";
+        console.log(skills[i].style.width);
+    }
 
 
 

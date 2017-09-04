@@ -1,17 +1,16 @@
 {
-  "name": "jjjj",
+  "name": "dasdasd",
   "version": "1.0.0",
   "description": "## Zadanie rozwiązywane z wykładowcą",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "./node_modules/.bin/webpack",
-    "server": "./node_modules/.bin/webpack-dev-server --hot"
+    "webpack": "webpack",
+    "server": "webpack-dev-server --inline"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.18.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-router": "^3.0.3"

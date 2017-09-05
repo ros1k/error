@@ -51,13 +51,16 @@ section{
           margin: auto 10px;
           height: 100%;
           padding-top:8.5%;
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
 
         }
       }
     }
   }
 }
-
 #home{
   height: 860px;
   width: 100%;
@@ -148,7 +151,6 @@ section{
     }
   }
 }
-
 #service{
   height: 740px;
   .container{
@@ -243,7 +245,6 @@ section{
     }
   }
 }
-
 #portfolio{
   min-height: 1px;
   .title{
@@ -283,6 +284,7 @@ section{
       }
       .item-zoom{
         position: absolute;
+        visibility: hidden;
         top: 33%;
         left: calc(50% - 50px);
         width: 100px;
@@ -300,7 +302,9 @@ section{
         }
       }
       .item-info{
-        color:black;
+        font-family: 'Open Sans';
+        visibility: hidden;
+        color:#1f2021;
         position: absolute;
         bottom:0;
         width: 100%;
@@ -348,7 +352,7 @@ section{
       .numbers-icon{
         margin:20px;
         width: 50px;
-        height: 50px;
+        height: 60px;
         position:relative;
         background-color: #1f2021;
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -466,6 +470,287 @@ section{
           }
         }
       }
+    }
+  }
+}
+#quote{
+  background-color: #1f2021;
+  color: #fff;text-align: center;
+  h2{
+    font-size: 26px;
+  }
+  h3{
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+#pricing{
+  .pricing-title{
+
+    text-align: center;
+    h2{
+      font-size: 30px;
+      font-weight: 400;
+    }
+    p{
+      margin: 0 auto;
+      padding-bottom: 100px;
+      font-size: 13px;
+      line-height: 25px;
+      font-weight: 300;
+      width: 500px;
+    }
+  }
+  .price-content{
+    color: #1f2021;
+    padding-left: 20px;
+    padding-right: 20px;
+    .price-content-price{
+      border-bottom: 1px solid #00c7fc;
+      border-top: 1px solid #00c7fc;
+      h2{
+        margin:0;
+        text-align: center;
+        font-size: 60px;
+        line-height: 89px;
+        font-weight: 600;
+        color:  #1f2021;
+        sub{
+          text-align: center;
+          font-size: 13px;
+          font-weight: 600;
+          color:  #1f2021;
+          line-height: 15px
+        }
+        sup{
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          color:  #1f2021;
+          line-height: 30px
+        }
+      }
+      h3{
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    .price-content-feature {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #00c7fc;
+      align-items: center;
+      h4{
+        color:  #1f2021;
+        display:block;
+        width: 140px;
+        margin:0;
+        padding: 15px 0;
+        border-bottom: 1px solid #00c7fc;
+      }
+      h4:last-child{
+        border: none;
+      }
+    }
+    .price-content-button{
+      margin-top: 40px;
+
+      .button{
+        margin: 0 auto;
+        text-align: center;
+        a{
+          border:1px solid #00c7fc;
+          padding: 10px 15px;
+          text-decoration: none;
+          color: #1f2021;
+        }
+      }
+    }
+  }
+  .pricing-contact{
+  text-align: center;
+    margin-top: 75px;
+    h4{
+     padding-bottom: 25px;
+    }
+    .pricing-contact-button{
+      a{
+        background-color: #00c7fc;
+        padding: 10px 30px 10px 30px;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+#subscribe{
+  background-color: #1f2021;
+  .subscribe-content{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .subscribe-email{
+      display: flex;
+      flex-grow: 2;
+      border: 1px solid white;
+      img{
+        margin-left: 20px;
+      }
+      .subEmail{
+        flex-grow: 2;
+        background-color: #1f2021;
+        color: white;
+        border: none;
+        margin-left: 20px;
+        padding: 20px 0;
+        &:focus{
+          outline: none;
+        }
+      }
+      .submitSubscribe{
+        background-color: #00c7fc;
+        border: none;
+        width: 150px;
+        color: #fff;
+
+      }
+    }
+    h5{
+      margin-left: 30px;
+      width: 400px;
+      color: #fff;
+      line-height: 22px;
+
+    }
+  }
+}
+#contact-us{
+  .contact-us-title{
+    text-align: center;
+    h2{
+      font-size: 30px;
+      font-weight: 400;
+    }
+    p{
+      margin: 0 auto;
+      padding-bottom: 100px;
+      font-size: 13px;
+      line-height: 25px;
+      font-weight: 300;
+      width: 500px;
+    }
+  }
+  .contact-us-content{
+    .contact-us-left{
+      .contact-us-form {
+        [placeholder]{
+          font-weight: 600;
+          font-size: 12px;
+        }
+        display: flex;
+        flex-direction: column;
+        span {
+          display: none;
+        }
+        input{
+          border: 1px solid #dbdbdb;
+          padding: 25px 15px;
+          margin-bottom: 20px;
+        }
+        .name {
+            height: 40px;
+        }
+        .email{
+          height: 40px;
+        }
+        .message[name=message]{
+          border: 1px solid #dbdbdb;
+          padding: 25px 15px;
+          height: 160px;
+          resize: none;
+        }
+        .send{
+          width: 150px;
+          padding: 20px;
+          align-self: flex-end;
+          margin-top: 30px;
+          background-color: #00c7fc;
+          color: white;
+          border: none;
+        }
+      }
+    }
+    .contact-us-right{
+      height: 100%;
+      padding-left: 20px;
+      .phone{
+        padding-top: 5px;
+        margin-bottom: 75px;
+        height: 45%;
+
+        h4{
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: 12px;
+          line-height: 10px;
+        }
+      }
+      .address{
+        padding-top: 5px;
+        h4{
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: 12px;
+          line-height: 10px;
+        }
+      }
+    }
+  }
+}
+footer{
+  background-color: #1f2021;
+  padding: 100px 0;
+  .footer-content{
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    .logo{
+
+    }
+    .social-media{
+      h2{
+        font-size: 15px;
+        color: #fff;
+      }
+      .links{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+      }
+    }
+    .copyright{
+      margin-top: 50px;
+      color: #fff;
+      h2{
+        font-size: 12px;
+
+        span{
+          color: #00c7fc;
+        }
+      }
+
     }
   }
 

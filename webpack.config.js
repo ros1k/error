@@ -4,7 +4,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: "./js/app.jsx",
+    entry: "./js/app.js",
     output: {
         path: path.resolve("js"),
         filename: "out.js"
@@ -17,7 +17,7 @@ module.exports = {
     watch: true,
     module: {
         loaders: [{
-            test: /\.jsx$/,
+            test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
             query: {

@@ -1,4 +1,5 @@
 @import "grid";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext');
 *{
   margin: 0;
   padding: 0;
@@ -7,12 +8,28 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-section{
-  padding: 100px 0;
+a {
+  -webkit-transition: all .3s ease-in 0s;
+  -moz-transition: all .3s ease-in 0s;
+  -ms-transition: all .3s ease-in 0s;
+  -o-transition: all .3s ease-in 0s;
+  transition: all .3s ease-in 0s;
+}
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
 }
 .position{
-  color: rgb(0, 199, 252);
-  border-bottom: 3px solid rgb(0, 199, 252);;
+  border-bottom: 3px solid rgb(0, 199, 252);
 }
 .container{
   width:1070px;
@@ -22,40 +39,47 @@ section{
   margin-left: auto;
 }
 
-#navigation{
+#top-bar{
   width: 100vw;
   position: fixed;
   color:#FFF;
   z-index: 100000;
   .container{
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(211,211,211, 0.6);
-    .header-logo{
-      flex-grow: 1;
-      span{
-        display: none;
+    .row{
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(211,211,211, 0.6);
+      .header-logo{
+        margin-left: 20px;
+        flex-grow: 1;
+        span{
+          display: none;
+        }
       }
-    }
-    nav{
-      position: relative;
-      height: 100%;
-      .menu{
-        text-align: center;
-        list-style-type: none;
-        height: 100%;
-        li{
-          display: inline-block;
-          margin: auto 10px;
-          height: 100%;
-          padding-top:8.5%;
-          a{
-            text-decoration: none;
-            color: #fff;
-          }
+      .navigation{
+        position: relative;
+        height: 100px;
+        .menu{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-content: center;
+          text-align: center;
+          list-style-type: none;
+          height: 100px;
+          li{
+            display: inline-block;
+            margin: auto 10px;
+            height: 100px;
+            padding-top:8.5%;
+            a{
+              text-decoration: none;
+              color: #fff;
+            }
 
+          }
         }
       }
     }
@@ -132,14 +156,21 @@ section{
   }
   .home-sliders{
       height: 100%;
-      width: 100%;
-    .home-slide{
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
       position: relative;
-      height: 100%;
+    .home-slide{
+      position: absolute;
+      height: 893px;
       width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
-      .home-slide-info{
+      img{
+        height: 100%;
+        width: 100%;
+      }
+      .slide{
         color: #FFF;
         position: absolute;
         top:25%;
@@ -152,27 +183,55 @@ section{
   }
 }
 #service{
+  font-family: 'Open Sans', sans-serif;
   height: 740px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
   .container{
     color: black;
     .service-title{
-      height: 135px;
-      margin-top: 50px;
+      height: 220px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: center;
+      align-items: center;
       h2{
-        margin-bottom: 30px;
+        color: #1f2021;
+        font-size: 30px;
+        position: relative;
+        margin-bottom: 25px;
+        padding-bottom: 27px;
+        text-transform: uppercase;
         &:after{
-
+          background: none repeat scroll 0 0 #fff;
+          border: 1px solid #1F2021;
+          border-radius: 25px;
+          bottom: -6px;
+          content: "";
+          height: 11px;
+          left: 50%;
+          margin-left: -5.5px;
+          position: absolute;
+          width: 11px;
         }
         &:before{
-
+          border-bottom: 1px solid #1f2021;
+          bottom: 0;
+          content: "";
+          left: 50%;
+          margin-left: -50px;
+          position: absolute;
+          width: 100px;
+          top: 100%;
         }
       }
       p{
-
+        font-family: 'Open Sans', sans-serif;
+        display: inline-block;
+        width: 420px;
+        text-align: center;
       }
     }
     .service-body{
@@ -203,6 +262,7 @@ section{
   }
 }
 #service-bottom{
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   height: 498px;
   background-image: url("../img/slider-bg.jpg");
@@ -213,14 +273,14 @@ section{
       .black {
         position: absolute;
         left: 20%;
-        top: 5%;
+        top: 99px;
         z-index: 5;
       }
       .white {
         position: absolute;
         left: 40%;
         z-index: 4;
-        top: 62px;
+        top: 161px;
       }
     }
     .service-feature {
@@ -246,11 +306,43 @@ section{
   }
 }
 #portfolio{
+  font-family: 'Open Sans', sans-serif;
   min-height: 1px;
-  .title{
-    margin: 0 auto 85px;
+  .title {
+    margin: 0 auto ;
     width: 420px;
     text-align: center;
+    h2{
+      margin-top: 66px;
+      color: #1f2021;
+      font-size: 30px;
+      position: relative;
+      margin-bottom: 25px;
+      padding-bottom: 27px;
+      text-transform: uppercase;
+      &:after {
+        background: none repeat scroll 0 0 #fff;
+        border: 1px solid #1F2021;
+        border-radius: 25px;
+        bottom: -6px;
+        content: "";
+        height: 11px;
+        left: 50%;
+        margin-left: -5.5px;
+        position: absolute;
+        width: 11px;
+      }
+      &:before {
+        border-bottom: 1px solid #1f2021;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        margin-left: -50px;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+      }
+    }
   }
   .projects-nav{
     width: 100%;
@@ -318,15 +410,50 @@ section{
   }
 }
 #about{
-  padding-bottom:0;
+  height: 500px;
   .about-wrap{
     .about-title{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
       text-align: center;
-      margin-bottom: 60px;
+      height: 236px;
+      h2{
+        color: #1f2021;
+        font-size: 30px;
+        position: relative;
+        margin-bottom: 25px;
+        padding-bottom: 27px;
+        text-transform: uppercase;
+        &:after {
+          background: none repeat scroll 0 0 #fff;
+          border: 1px solid #1F2021;
+          border-radius: 25px;
+          bottom: -6px;
+          content: "";
+          height: 11px;
+          left: 50%;
+          margin-left: -5.5px;
+          position: absolute;
+          width: 11px;
+        }
+        &:before {
+          border-bottom: 1px solid #1f2021;
+          bottom: 0;
+          content: "";
+          left: 50%;
+          margin-left: -50px;
+          position: absolute;
+          width: 100px;
+          top: 100%;
+        }
+      }
     }
     .about-image{
       text-align: center;
-      margin-bottom: -12px;
+
       .img{
 
         display: block;
@@ -337,11 +464,13 @@ section{
 }
 #numbers{
   color:white;
-  background-color: #1f2021;
+  background-color: #121116;
   padding-bottom: 90px;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   .numbers-show{
-    flex-direction: row;
-
     .number-show-content{
       background-color: #096c89;
       padding: 25px 0 40px;
@@ -377,6 +506,9 @@ section{
   }
 }
 #about-us{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: 'Open Sans', sans-serif;
   .about-as-left{
 
     .about-us-title{
@@ -449,6 +581,7 @@ section{
         height: 25px;
         background-color: #00C7FC;
         .bar-info{
+          width: 30px !important;
           position: absolute;
           background-color: black;
           color:white;
@@ -474,6 +607,9 @@ section{
   }
 }
 #quote{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: 'Open Sans', sans-serif;
   background-color: #1f2021;
   color: #fff;text-align: center;
   h2{
@@ -485,12 +621,42 @@ section{
   }
 }
 #pricing{
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height:1135px;
   .pricing-title{
 
     text-align: center;
     h2{
+      color: #1f2021;
       font-size: 30px;
-      font-weight: 400;
+      position: relative;
+      margin-bottom: 25px;
+      padding-bottom: 27px;
+      text-transform: uppercase;
+      &:after {
+        background: none repeat scroll 0 0 #fff;
+        border: 1px solid #1F2021;
+        border-radius: 25px;
+        bottom: -6px;
+        content: "";
+        height: 11px;
+        left: 50%;
+        margin-left: -5.5px;
+        position: absolute;
+        width: 11px;
+      }
+      &:before {
+        border-bottom: 1px solid #1f2021;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        margin-left: -50px;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+      }
     }
     p{
       margin: 0 auto;
@@ -569,12 +735,14 @@ section{
     }
   }
   .pricing-contact{
-  text-align: center;
+    text-align: center;
     margin-top: 75px;
     h4{
-     padding-bottom: 25px;
+      margin-top: 100px;
+      margin-bottom: 35px;
     }
     .pricing-contact-button{
+      margin-top: 60px;
       a{
         background-color: #00c7fc;
         padding: 10px 30px 10px 30px;
@@ -585,6 +753,9 @@ section{
   }
 }
 #subscribe{
+  padding-bottom: 100px;
+  padding-top: 100px;
+  font-family: 'Open Sans', sans-serif;
   background-color: #1f2021;
   .subscribe-content{
 
@@ -628,11 +799,40 @@ section{
   }
 }
 #contact-us{
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 100px;
+  padding-top: 100px;
   .contact-us-title{
     text-align: center;
     h2{
+      color: #1f2021;
       font-size: 30px;
-      font-weight: 400;
+      position: relative;
+      margin-bottom: 25px;
+      padding-bottom: 27px;
+      text-transform: uppercase;
+      &:after {
+        background: none repeat scroll 0 0 #fff;
+        border: 1px solid #1F2021;
+        border-radius: 25px;
+        bottom: -6px;
+        content: "";
+        height: 11px;
+        left: 50%;
+        margin-left: -5.5px;
+        position: absolute;
+        width: 11px;
+      }
+      &:before {
+        border-bottom: 1px solid #1f2021;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        margin-left: -50px;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+      }
     }
     p{
       margin: 0 auto;
@@ -719,6 +919,7 @@ section{
   }
 }
 footer{
+  font-family: 'Open Sans', sans-serif;
   background-color: #1f2021;
   padding: 100px 0;
   .footer-content{

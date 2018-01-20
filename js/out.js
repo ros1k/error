@@ -376,23 +376,20 @@ $(document).ready(function () {
 
 var email = $('.contact-us-form #email');
 
-$(email).focusout(function (e) {
-    $(email).focus().css("outline", "-webkit-focus-ring-color auto 5px;");
-});
-$(email).focusin(function (e) {
-    $(email).keyup(function (e) {
-        if (!validateEmail(e.currentTarget.value)) {
-            $(this).focus().css("outline", "1px solid red");
-        }
-        if (validateEmail(e.currentTarget.value)) {
-            $(this).focus().css("outline", "1px solid lime");
-        }
-    });
+$(email).keyup(function (e) {
+    if (!ValidateEmail(e.currentTarget.value)) {
+        $(this).focus().css("outline", "1px solid red");
+    }
+    if (ValidateEmail(e.currentTarget.value)) {
+        $(this).focus().css("outline", "1px solid lime");
+    }
 });
 
-function validateEmail(_email) {
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    return emailReg.test(_email);
+function ValidateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+        return true;
+    }
+    return false;
 }
 
 /***/ })
